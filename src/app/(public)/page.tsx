@@ -1,7 +1,5 @@
+import { ExampleSection } from "./_sections/example";
+
 export default function RootPage() {
-	return (
-		<section>
-			<h2>Hero Section</h2>
-		</section>
-	);
+	return <ExampleSection />;
 }
