@@ -69,7 +69,7 @@ const ColorSection: FC<{
 export const ColorShowcase: FC = () => {
 	return (
 		<div className="p-8 space-y-12 bg-white min-h-screen">
-			<div className="max-w-7xl mx-auto">
+			<div className="max-w-7xl mx-auto space-y-12">
 				<h1 className="text-3xl font-bold text-text-1000 mb-8">Color System</h1>
 
 				{/* Primary Colors */}
