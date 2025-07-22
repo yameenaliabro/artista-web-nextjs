@@ -18,7 +18,7 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
 		<html lang="en" suppressHydrationWarning>
 			<body className={`${mavenPro.className} antialiased`}>
 				<RootProvider>
-					<Header />
+					{/* <Header /> */}
 					{children}
 					<Footer />
 				</RootProvider>
