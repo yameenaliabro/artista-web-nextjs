@@ -63,7 +63,7 @@ export const text = {
 
 // Neutral Colors
 export const neutral = {
-	900: "#1F1F1F",
+	800: "#1F1F1F",
 	700: "#4B4B4B",
 	600: "#8E8E8E",
 	500: "#CACACA",

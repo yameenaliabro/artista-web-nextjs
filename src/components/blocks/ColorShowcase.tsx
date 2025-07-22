@@ -84,11 +84,9 @@ export const ColorShowcase: FC = () => {
 				{/* Text Colors */}
 				<ColorSection title="Text Colors" colors={colors.text} />
 
-				{/* Neutral Colors */}
-				<ColorSection title="Neutral Colors" colors={colors.neutral} />
-
 				{/* Semantic Colors */}
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+					<ColorSection title="Neutral" colors={colors.neutral} />
 					<ColorSection title="Danger" colors={colors.danger} />
 					<ColorSection title="Warning" colors={colors.warning} />
 					<ColorSection title="Success" colors={colors.success} />
