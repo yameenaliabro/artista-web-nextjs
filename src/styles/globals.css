@@ -9,7 +9,7 @@
 	--font-mono: var(--font-geist-mono);
 
 	/* Base Radius */
-	--radius: 1.25rem;
+	--radius: 0.75rem;
 
 	/* Primary Colors */
 	--color-primary-1000: #00365f;
@@ -131,6 +131,9 @@
 	--radius-md: calc(var(--radius) - 2px);
 	--radius-lg: var(--radius);
 	--radius-xl: calc(var(--radius) + 4px);
+	--radius-2xl: calc(var(--radius) + 8px);
+	--radius-3xl: calc(var(--radius) + 12px);
+	--radius-full: 9999px;
 
 	/* Colors */
 	--color-background: var(--color-white);

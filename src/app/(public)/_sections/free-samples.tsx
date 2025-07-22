@@ -32,14 +32,14 @@ export function FreeSamplesSection() {
 				</div>
 				<div className="w-full md:w-1/2 h-1/2 md:h-full">
 					<div className="relative aspect-[3/4] w-2/3 mx-auto">
-						<div className="absolute inset-0 z-20 rounded-4xl overflow-hidden translate-y-8 -translate-x-20">
+						<div className="absolute inset-0 z-20 rounded-4xl overflow-hidden translate-y-6 md:translate-y-8 -translate-x-12 md:-translate-x-20">
 							<Image
 								src={assets.images.home.sample1.src}
 								alt={assets.images.home.sample1.alt}
 								className="size-full object-center object-cover"
 							/>
 						</div>
-						<div className="absolute inset-0 z-10 rounded-4xl overflow-hidden -translate-y-8 translate-x-20">
+						<div className="absolute inset-0 z-10 rounded-4xl overflow-hidden -translate-y-6 md:-translate-y-8 translate-x-12 md:translate-x-20">
 							<Image
 								src={assets.images.home.sample2.src}
 								alt={assets.images.home.sample2.alt}

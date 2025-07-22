@@ -95,11 +95,11 @@ export function DiscoverSection() {
 							>
 								<div className="px-3">
 									<Card className="pt-4 gap-2 group cursor-pointer">
-										<CardContent className="aspect-[3/4] px-4">
+										<CardContent className="relative aspect-[3/4] mx-4 px-0 rounded-lg overflow-hidden">
 											<Image
 												src={category.pictureId}
 												alt={category.name}
-												className="rounded-lg size-full object-center object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+												className="size-full object-center object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
 											/>
 										</CardContent>
 										<CardFooter className="px-4">
