@@ -1,5 +1,9 @@
-import { ExampleSection } from "./_sections/example";
+import { HeroSection } from "./_sections/hero";
 
 export default function RootPage() {
-	return <ExampleSection />;
+	return (
+		<main>
+			<HeroSection />
+		</main>
+	);
 }

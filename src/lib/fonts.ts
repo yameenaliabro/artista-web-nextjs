@@ -1,11 +1,6 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Maven_Pro } from "next/font/google";
 
-export const geistSans = Geist({
-	variable: "--font-geist-sans",
-	subsets: ["latin"],
-});
-
-export const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
+export const mavenPro = Maven_Pro({
+	variable: "--font-maven-pro",
 	subsets: ["latin"],
 });

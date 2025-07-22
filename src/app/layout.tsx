@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
 
-import { geistMono, geistSans } from "~/lib/fonts";
+import { mavenPro } from "~/lib/fonts";
 import { Footer } from "./_layout/footer";
 import { Header } from "./_layout/header";
 import { RootProvider } from "./provider";
@@ -16,9 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-			>
+			<body className={`${mavenPro.className} antialiased`}>
 				<RootProvider>
 					<Header />
 					{children}
