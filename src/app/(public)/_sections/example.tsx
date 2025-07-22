@@ -12,11 +12,11 @@ export function ExampleSection() {
 		<section>
 			<h2>Examples</h2>
 			<h3>Counter (State)</h3>
-			<Button variant="outline" size="sm" onClick={increment}>
+			<Button variant="outline" size="lg" onClick={increment}>
 				Increment
 			</Button>
 			<p>Count: {count}</p>
-			<Button variant="outline" size="sm" onClick={decrement}>
+			<Button variant="outline" size="lg" onClick={decrement}>
 				Decrement
 			</Button>
 		</section>
