@@ -104,27 +104,41 @@ export function HelpMeasureSection() {
 															onValueChange={field.onChange}
 															className="flex "
 														>
-															<FormItem className="flex items-center gap-3">
-																<FormControl>
-																	<RadioGroupItem
-																		value={MountType.Inside}
-																		className="bg-white"
-																	/>
-																</FormControl>
-																<FormLabel className="text-white">
-																	Inside
-																</FormLabel>
+															<FormItem className="space-y-3">
+																<Image
+																	src={assets.images.home.blindInside.src}
+																	alt={assets.images.home.blindInside.alt}
+																	className="size-24 object-center object-cover"
+																/>
+																<div className="flex items-center gap-3">
+																	<FormControl>
+																		<RadioGroupItem
+																			value={MountType.Inside}
+																			className="bg-white"
+																		/>
+																	</FormControl>
+																	<FormLabel className="text-white">
+																		<span>Inside</span>
+																	</FormLabel>
+																</div>
 															</FormItem>
-															<FormItem className="flex items-center gap-3">
-																<FormControl>
-																	<RadioGroupItem
-																		value={MountType.Outside}
-																		className="bg-white"
-																	/>
-																</FormControl>
-																<FormLabel className="text-white">
-																	Outside
-																</FormLabel>
+															<FormItem className="space-y-3">
+																<Image
+																	src={assets.images.home.blindOutside.src}
+																	alt={assets.images.home.blindOutside.alt}
+																	className="size-24 object-center object-cover"
+																/>
+																<div className="flex items-center gap-3">
+																	<FormControl>
+																		<RadioGroupItem
+																			value={MountType.Outside}
+																			className="bg-white"
+																		/>
+																	</FormControl>
+																	<FormLabel className="text-white">
+																		<span>Outside</span>
+																	</FormLabel>
+																</div>
 															</FormItem>
 														</RadioGroup>
 													</FormControl>
@@ -138,7 +152,7 @@ export function HelpMeasureSection() {
 									<h3 className="text-white font-semibold">
 										Enter Measurements
 									</h3>
-									<div className="flex items-center gap-6">
+									<div className="flex items-baseline gap-6">
 										<FormField
 											control={form.control}
 											name="widthBeforeDecimals"
@@ -176,7 +190,7 @@ export function HelpMeasureSection() {
 											)}
 										/>
 									</div>
-									<div className="flex items-center gap-6">
+									<div className="flex items-baseline gap-6">
 										<FormField
 											control={form.control}
 											name="heightBeforeDecimals"
