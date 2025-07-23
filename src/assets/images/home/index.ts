@@ -7,6 +7,7 @@ import Hero from "~/assets/images/home/hero.jpg";
 import OurBlinds from "~/assets/images/home/our-blinds.png";
 import Sample1 from "~/assets/images/home/sample1.png";
 import Sample2 from "~/assets/images/home/sample2.png";
+import WhyChoose from "~/assets/images/home/why-choose.png";
 
 export const home = {
 	hero: {
@@ -32,6 +33,10 @@ export const home = {
 	sample2: {
 		src: Sample2,
 		alt: "Sample 2",
+	},
+	whyChoose: {
+		src: WhyChoose,
+		alt: "Why Choose",
 	},
 	ourBlinds: {
 		src: OurBlinds,
