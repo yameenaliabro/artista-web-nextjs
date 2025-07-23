@@ -23,7 +23,7 @@ export function CTASection() {
 					</h2>
 					<p className="max-w-2xl text-sm text-accent-foreground">
 						Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqut enim ad minim{" "}
+						tempor incididunt ut labore et dolore magna aliqut enim ad minim
 					</p>
 					<Button variant="muted" size="lg">
 						Get a Free Estimate

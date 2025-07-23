@@ -5,6 +5,7 @@ import { FreeSamplesSection } from "./_sections/free-samples";
 import { HeroSection } from "./_sections/hero";
 import { HomeBlindsSection } from "./_sections/home-blinds";
 import { OurBlindsSection } from "./_sections/our-blinds";
+import { ProductsSection } from "./_sections/products";
 
 export default function RootPage() {
 	return (
@@ -12,6 +13,7 @@ export default function RootPage() {
 			<HeroSection />
 			<DiscoverCategoriesSection />
 			<FreeSamplesSection />
+			<ProductsSection />
 			<HomeBlindsSection />
 			<OurBlindsSection />
 			<DiscountDealSection />
