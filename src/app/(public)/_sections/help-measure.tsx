@@ -18,8 +18,17 @@ import {
 	FormMessage,
 } from "~/components/ui/form";
 import { Input } from "~/components/ui/input";
+import { RadioGroup, RadioGroupItem } from "~/components/ui/radio-group";
+
+enum MountType {
+	Inside = "Inside",
+	Outside = "Outside",
+}
 
 const HelpMeasureSectionFormSchema = z.object({
+	mountType: z.nativeEnum(MountType, {
+		message: "Mount Type must be Inside or Outside",
+	}),
 	widthBeforeDecimals: z.coerce.number().min(1, {
 		message: "Width must be at least 1 inch.",
 	}),
@@ -38,6 +47,7 @@ export function HelpMeasureSection() {
 	const form = useForm<z.infer<typeof HelpMeasureSectionFormSchema>>({
 		resolver: zodResolver(HelpMeasureSectionFormSchema),
 		defaultValues: {
+			mountType: MountType.Inside,
 			widthBeforeDecimals: 0,
 			widthAfterDecimals: 0,
 			heightBeforeDecimals: 0,
@@ -79,6 +89,51 @@ export function HelpMeasureSection() {
 								onSubmit={form.handleSubmit(onSubmit)}
 								className="space-y-6"
 							>
+								<div className="space-y-6">
+									<h3 className="text-white font-semibold">
+										Select Mount Type
+									</h3>
+									<div>
+										<FormField
+											control={form.control}
+											name="mountType"
+											render={({ field }) => (
+												<FormItem className="space-y-3">
+													<FormControl>
+														<RadioGroup
+															onValueChange={field.onChange}
+															className="flex "
+														>
+															<FormItem className="flex items-center gap-3">
+																<FormControl>
+																	<RadioGroupItem
+																		value={MountType.Inside}
+																		className="bg-white"
+																	/>
+																</FormControl>
+																<FormLabel className="text-white">
+																	Inside
+																</FormLabel>
+															</FormItem>
+															<FormItem className="flex items-center gap-3">
+																<FormControl>
+																	<RadioGroupItem
+																		value={MountType.Outside}
+																		className="bg-white"
+																	/>
+																</FormControl>
+																<FormLabel className="text-white">
+																	Outside
+																</FormLabel>
+															</FormItem>
+														</RadioGroup>
+													</FormControl>
+													<FormMessage />
+												</FormItem>
+											)}
+										/>
+									</div>
+								</div>
 								<div className="space-y-6">
 									<h3 className="text-white font-semibold">
 										Enter Measurements
