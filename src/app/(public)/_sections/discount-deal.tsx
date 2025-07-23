@@ -24,7 +24,7 @@ export function DiscountDealSection() {
 									<Input
 										type="email"
 										className="pe-32 py-6 bg-white"
-										placeholder="Email"
+										placeholder="Email Address"
 									/>
 									<button
 										type="button"
