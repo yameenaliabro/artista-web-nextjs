@@ -5,13 +5,13 @@ import { HeroSection } from "./_sections/hero";
 import { HomeBlindsSection } from "./_sections/home-blinds";
 
 export default function RootPage() {
-	return (
-		<main>
-			<HeroSection />
-			<DiscoverCategoriesSection />
-			<FreeSamplesSection />
-			<HomeBlindsSection />
-			<CTASection />
-		</main>
-	);
+  return (
+    <main>
+      <HeroSection />
+      <DiscoverCategoriesSection />
+      <FreeSamplesSection />
+      <HomeBlindsSection />
+      <CTASection />
+    </main>
+  );
 }
