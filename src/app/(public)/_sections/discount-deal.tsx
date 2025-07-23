@@ -1,3 +1,4 @@
+import { ArrowRightCircle } from "lucide-react";
 import Image from "next/image";
 import { Container } from "~/app/_layout/container";
 import { assets } from "~/assets";
@@ -17,9 +18,24 @@ export function DiscountDealSection() {
 							Accumsan montes nascetur tempor proin penatibus ligula curae eu
 							metus maximus fringilla primis finibus nunc
 						</p>
-						{/* TODO */}
 						<div className="flex items-center gap-6">
-							<Input placeholder="Email Address" />
+							<div className="w-full">
+								<div className="relative">
+									<Input
+										type="email"
+										className="pe-32 py-6 bg-white"
+										placeholder="Email"
+									/>
+									<button
+										type="button"
+										className="text-xs text-primary-500 hover:text-primary focus-visible:border-ring focus-visible:ring-ring/50 absolute inset-y-0 end-0 flex h-full w-32 items-center justify-center rounded-e-md transition-[color,box-shadow] outline-none focus:z-10 focus-visible:ring-[3px] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
+										aria-label="Subscribe"
+									>
+										<span>Subscribe</span>
+										<ArrowRightCircle size={12} className="ml-1" />
+									</button>
+								</div>
+							</div>
 						</div>
 						<p className="max-w-2xl text-lg">
 							*By Submitting this form, you agree to receive Furiforma’s email
