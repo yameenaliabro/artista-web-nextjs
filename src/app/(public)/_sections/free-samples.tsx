@@ -9,9 +9,6 @@ export function FreeSamplesSection() {
 			<div className="absolute inset-0 -z-40 bg-primary-100/25" />
 			<Container className="relative z-50 flex flex-col-reverse md:flex-row items-center gap-24 md:gap-12 py-24 md:py-36">
 				<div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col justify-center">
-					<div>
-						<h4 className="text-lg text-secondary">ARTISTA BLINDS</h4>
-					</div>
 					<div className="space-y-6">
 						<h2 className="max-w-2xl -ml-1.5 text-3xl md:text-5xl font-bold">
 							<span className="text-primary">Get Free </span>{" "}
