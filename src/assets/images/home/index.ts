@@ -4,6 +4,7 @@ import Category3 from "~/assets/images/home/category3.png";
 import CTA from "~/assets/images/home/cta.png";
 import DiscountDeal from "~/assets/images/home/discount-deal.png";
 import Hero from "~/assets/images/home/hero.jpg";
+import OurBlinds from "~/assets/images/home/our-blinds.png";
 import Sample1 from "~/assets/images/home/sample1.png";
 import Sample2 from "~/assets/images/home/sample2.png";
 
@@ -31,6 +32,10 @@ export const home = {
 	sample2: {
 		src: Sample2,
 		alt: "Sample 2",
+	},
+	ourBlinds: {
+		src: OurBlinds,
+		alt: "Our Blinds",
 	},
 	discountDeal: {
 		src: DiscountDeal,
