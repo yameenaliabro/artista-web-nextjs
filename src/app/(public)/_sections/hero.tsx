@@ -5,7 +5,7 @@ import { Button } from "~/components/ui/button";
 
 export function HeroSection() {
 	return (
-		<section className="relative h-[calc(100vh-12rem)]">
+		<section className="relative h-[calc(100vh-6rem)]">
 			<Image
 				src={assets.images.home.hero.src}
 				alt={assets.images.home.hero.alt}
