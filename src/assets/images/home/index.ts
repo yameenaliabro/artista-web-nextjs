@@ -1,6 +1,7 @@
 import Category1 from "~/assets/images/home/category1.png";
 import Category2 from "~/assets/images/home/category2.png";
 import Category3 from "~/assets/images/home/category3.png";
+import CTA from "~/assets/images/home/cta.png";
 import Hero from "~/assets/images/home/hero.jpg";
 import Sample1 from "~/assets/images/home/sample1.png";
 import Sample2 from "~/assets/images/home/sample2.png";
@@ -29,5 +30,9 @@ export const home = {
 	sample2: {
 		src: Sample2,
 		alt: "Sample 2",
+	},
+	cta: {
+		src: CTA,
+		alt: "CTA",
 	},
 };
