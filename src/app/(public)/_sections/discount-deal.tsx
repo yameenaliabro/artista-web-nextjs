@@ -28,7 +28,7 @@ export function DiscountDealSection() {
 					</div>
 				</div>
 				<div className="w-full md:w-3/5 h-3/5 md:h-full">
-					<div className="relative aspect-[12/9]">
+					<div className="aspect-[12/9] rounded-md overflow-hidden">
 						<Image
 							src={assets.images.home.discountDeal.src}
 							alt={assets.images.home.discountDeal.alt}
