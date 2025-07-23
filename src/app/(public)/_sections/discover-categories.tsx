@@ -103,7 +103,7 @@ export function DiscoverCategoriesSection() {
 											/>
 										</CardContent>
 										<CardFooter className="px-4">
-											<CardTitle className="text-primary text-3xl">
+											<CardTitle className="text-primary text-2xl">
 												{category.name}
 											</CardTitle>
 										</CardFooter>
