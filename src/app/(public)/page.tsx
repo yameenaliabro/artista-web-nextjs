@@ -1,13 +1,15 @@
-import { DiscoverSection } from "./_sections/discover";
+import { DiscoverCategoriesSection } from "./_sections/discover-categories";
 import { FreeSamplesSection } from "./_sections/free-samples";
 import { HeroSection } from "./_sections/hero";
+import { HomeBlindsSection } from "./_sections/home-blinds";
 
 export default function RootPage() {
 	return (
 		<main>
 			<HeroSection />
-			<DiscoverSection />
+			<DiscoverCategoriesSection />
 			<FreeSamplesSection />
+			<HomeBlindsSection />
 		</main>
 	);
 }

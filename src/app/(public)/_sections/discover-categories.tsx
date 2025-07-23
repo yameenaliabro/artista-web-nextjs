@@ -63,7 +63,7 @@ const categories: {
 	},
 ];
 
-export function DiscoverSection() {
+export function DiscoverCategoriesSection() {
 	return (
 		<section className="relative">
 			<Container className="py-16 space-y-16">
