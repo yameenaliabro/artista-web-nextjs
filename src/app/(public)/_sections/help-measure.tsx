@@ -1,9 +1,60 @@
+"use client";
+
+import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
+import { z } from "zod";
 
 import { Container } from "~/app/_layout/container";
 import { assets } from "~/assets";
+import { Button } from "~/components/ui/button";
+import {
+	Form,
+	FormControl,
+	FormLabel,
+	FormField,
+	FormItem,
+	FormMessage,
+} from "~/components/ui/form";
+import { Input } from "~/components/ui/input";
+
+const HelpMeasureSectionFormSchema = z.object({
+	widthBeforeDecimals: z.coerce.number().min(1, {
+		message: "Width must be at least 1 inch.",
+	}),
+	widthAfterDecimals: z.coerce.number().min(0, {
+		message: "Width must be at least 0 inch.",
+	}),
+	heightBeforeDecimals: z.coerce.number().min(1, {
+		message: "Height must be at least 1 inch.",
+	}),
+	heightAfterDecimals: z.coerce.number().min(0, {
+		message: "Height must be at least 0 inch.",
+	}),
+});
 
 export function HelpMeasureSection() {
+	const form = useForm<z.infer<typeof HelpMeasureSectionFormSchema>>({
+		resolver: zodResolver(HelpMeasureSectionFormSchema),
+		defaultValues: {
+			widthBeforeDecimals: 0,
+			widthAfterDecimals: 0,
+			heightBeforeDecimals: 0,
+			heightAfterDecimals: 0,
+		},
+	});
+
+	function onSubmit(data: z.infer<typeof HelpMeasureSectionFormSchema>) {
+		toast("You submitted the following values", {
+			description: (
+				<pre className="mt-2 w-[320px] rounded-md bg-neutral-950 p-4">
+					<code className="text-white">{JSON.stringify(data, null, 2)}</code>
+				</pre>
+			),
+		});
+	}
+
 	return (
 		<section className="relative">
 			<Image
@@ -23,6 +74,97 @@ export function HelpMeasureSection() {
 							Every blind in made to fit your window precisely, down to the last
 							inch
 						</p>
+						<Form {...form}>
+							<form
+								onSubmit={form.handleSubmit(onSubmit)}
+								className="space-y-6"
+							>
+								<div className="space-y-6">
+									<h3 className="text-white font-semibold">
+										Enter Measurements
+									</h3>
+									<div className="flex items-center gap-6">
+										<FormField
+											control={form.control}
+											name="widthBeforeDecimals"
+											render={({ field }) => (
+												<FormItem className="flex-1">
+													<FormLabel className="text-white/75 text-xs">
+														Width (Inches)
+													</FormLabel>
+													<FormControl>
+														<Input
+															type="number"
+															className="bg-white"
+															{...field}
+														/>
+													</FormControl>
+													<FormMessage />
+												</FormItem>
+											)}
+										/>
+										<FormField
+											control={form.control}
+											name="widthAfterDecimals"
+											render={({ field }) => (
+												<FormItem className="flex-1">
+													<FormLabel className="opacity-0">.</FormLabel>
+													<FormControl>
+														<Input
+															type="number"
+															className="bg-white"
+															{...field}
+														/>
+													</FormControl>
+													<FormMessage />
+												</FormItem>
+											)}
+										/>
+									</div>
+									<div className="flex items-center gap-6">
+										<FormField
+											control={form.control}
+											name="heightBeforeDecimals"
+											render={({ field }) => (
+												<FormItem className="flex-1">
+													<FormLabel className="text-white/75 text-xs">
+														Height (Inches)
+													</FormLabel>
+													<FormControl>
+														<Input
+															type="number"
+															className="bg-white"
+															{...field}
+														/>
+													</FormControl>
+													<FormMessage />
+												</FormItem>
+											)}
+										/>
+										<FormField
+											control={form.control}
+											name="heightAfterDecimals"
+											render={({ field }) => (
+												<FormItem className="flex-1">
+													<FormLabel className="opacity-0">.</FormLabel>
+													<FormControl>
+														<Input
+															type="number"
+															className="bg-white"
+															{...field}
+														/>
+													</FormControl>
+													<FormMessage />
+												</FormItem>
+											)}
+										/>
+									</div>
+								</div>
+								<div>
+									<Button type="submit">Save Size</Button>
+								</div>
+							</form>
+						</Form>
 					</div>
 				</div>
 				<div className="w-full md:w-1/2 h-1/2 md:h-full">
