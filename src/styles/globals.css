@@ -142,7 +142,7 @@
 	--color-primary-foreground: var(--color-white);
 	--color-secondary: var(--color-secondary-500);
 	--color-secondary-foreground: var(--color-white);
-	--color-accent: var(--color-tertiary-700);
+	--color-accent: var(--color-tertiary-500);
 	--color-accent-foreground: var(--color-white);
 	--color-muted: var(--color-neutral-300);
 	--color-muted-foreground: var(--color-text-700);

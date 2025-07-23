@@ -1,12 +1,15 @@
 "use client";
 
 import Autoplay from "embla-carousel-autoplay";
+import { HeartIcon } from "lucide-react";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 
 import { Container } from "~/app/_layout/container";
 import { assets } from "~/assets";
 import { Ratings } from "~/components/blocks/ratings";
+import { Badge } from "~/components/ui/badge";
+import { Button } from "~/components/ui/button";
 import {
 	Card,
 	CardContent,
@@ -103,16 +106,31 @@ export function ProductsSection() {
 								key={category.id}
 								className="sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
 							>
-								<div className="px-3">
+								<div className="px-0">
 									<Card className="py-2 gap-2 border-none shadow-none group cursor-pointer">
 										<CardHeader className="mx-2 px-0 relative aspect-square rounded-lg overflow-hidden">
+											<Badge
+												variant="accent"
+												className="absolute top-4 left-4 z-20 px-2 py-1 rounded-xs"
+											>
+												New
+											</Badge>
+											<Button
+												variant="outline"
+												size="icon"
+												className="absolute top-4 right-4 z-20 border-none rounded-md"
+											>
+												<HeartIcon />
+											</Button>
 											<Image
 												src={category.pictureId}
 												alt={category.name}
-												className="size-full object-center object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+												className="z-10 size-full object-center object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
 											/>
 										</CardHeader>
 										<CardContent className="px-2 space-y-2">
+											{/* TODO */}
+											<div />
 											<CardTitle className="text-xs">{category.name}</CardTitle>
 											<Ratings rating={5} reviewsCount={3} />
 										</CardContent>
