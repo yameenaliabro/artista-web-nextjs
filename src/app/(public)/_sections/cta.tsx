@@ -18,10 +18,10 @@ export function CTASection() {
 			<Container className="py-16 space-y-16">
 				<div className="flex flex-col items-center text-center gap-8">
 					<h2 className="max-w-2xl -ml-1.5 text-3xl md:text-5xl font-bold">
-						<span className="text-accent-foreground">Not Sure Where to</span>{" "}
+						<span className="text-white">Not Sure Where to</span>{" "}
 						<span className="text-secondary">Start?</span>
 					</h2>
-					<p className="max-w-2xl text-sm text-accent-foreground">
+					<p className="max-w-2xl text-sm text-white">
 						Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqut enim ad minim
 					</p>
