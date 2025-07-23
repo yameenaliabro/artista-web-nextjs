@@ -8,6 +8,10 @@ import OurBlinds from "~/assets/images/home/our-blinds.png";
 import Sample1 from "~/assets/images/home/sample1.png";
 import Sample2 from "~/assets/images/home/sample2.png";
 import WhyChoose from "~/assets/images/home/why-choose.png";
+import HelpMeasureBg from "~/assets/images/home/help-measure-bg.png";
+import HelpMeasureBlind from "~/assets/images/home/help-measure-blind.png";
+import BlindInside from "~/assets/images/home/blind-inside.png";
+import BlindOutside from "~/assets/images/home/blind-outside.png";
 
 export const home = {
 	hero: {
@@ -33,6 +37,22 @@ export const home = {
 	sample2: {
 		src: Sample2,
 		alt: "Sample 2",
+	},
+	helpMeasureBg: {
+		src: HelpMeasureBg,
+		alt: "Help Measure Bg",
+	},
+	helpMeasureBlind: {
+		src: HelpMeasureBlind,
+		alt: "Help Measure Blind",
+	},
+	blindInside: {
+		src: BlindInside,
+		alt: "Blind Inside",
+	},
+	blindOutside: {
+		src: BlindOutside,
+		alt: "Blind Outside",
 	},
 	whyChoose: {
 		src: WhyChoose,
