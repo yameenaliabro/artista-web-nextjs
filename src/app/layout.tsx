@@ -3,7 +3,7 @@ import type { PropsWithChildren } from "react";
 
 import { mavenPro } from "~/lib/fonts";
 import { Footer } from "./_layout/footer";
-import { Header } from "./_layout/header";
+// import { Header } from "./_layout/header";
 import { RootProvider } from "./provider";
 
 import "~/styles/globals.css";

@@ -74,7 +74,7 @@ export function DiscoverCategoriesSection() {
 					</h2>
 					<p className="max-w-2xl text-sm text-muted-foreground">
 						Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqut enim ad minim{" "}
+						tempor incididunt ut labore et dolore magna aliqut enim ad minim
 					</p>
 				</div>
 				<Carousel
@@ -103,7 +103,7 @@ export function DiscoverCategoriesSection() {
 											/>
 										</CardContent>
 										<CardFooter className="px-4">
-											<CardTitle className="text-primary text-3xl">
+											<CardTitle className="text-primary text-2xl">
 												{category.name}
 											</CardTitle>
 										</CardFooter>

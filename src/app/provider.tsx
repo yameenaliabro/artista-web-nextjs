@@ -1,6 +1,7 @@
 import type { PropsWithChildren } from "react";
 
 import { ThemeProvider } from "~/components/providers/theme";
+import { Toaster } from "~/components/ui/sonner";
 
 export function RootProvider({ children }: Readonly<PropsWithChildren>) {
 	return (
@@ -11,6 +12,7 @@ export function RootProvider({ children }: Readonly<PropsWithChildren>) {
 			disableTransitionOnChange
 		>
 			{children}
+			<Toaster />
 		</ThemeProvider>
 	);
 }

@@ -74,7 +74,7 @@ export function HomeBlindsSection() {
 					</h2>
 					<p className="max-w-2xl text-sm text-muted-foreground">
 						Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqut enim ad minim{" "}
+						tempor incididunt ut labore et dolore magna aliqut enim ad minim
 					</p>
 				</div>
 				<Carousel
@@ -94,7 +94,7 @@ export function HomeBlindsSection() {
 								className="sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
 							>
 								<div className="px-3">
-									<Card className="py-2 gap-2 group cursor-pointer bg-primary-100/25">
+									<Card className="py-2 gap-2 group cursor-pointer bg-primary-100/15">
 										<CardContent className="relative aspect-square mx-2 px-0 rounded-lg overflow-hidden">
 											<Image
 												src={category.pictureId}
@@ -103,9 +103,7 @@ export function HomeBlindsSection() {
 											/>
 										</CardContent>
 										<CardFooter className="px-2">
-											<CardTitle className="text-primary text-xl">
-												{category.name}
-											</CardTitle>
+											<CardTitle className="text-xl">{category.name}</CardTitle>
 										</CardFooter>
 									</Card>
 								</div>
