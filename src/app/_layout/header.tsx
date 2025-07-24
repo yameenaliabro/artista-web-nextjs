@@ -18,7 +18,7 @@ export function Header() {
 					<p>Stylish Blinds, Timeless Design, Comfort Guaranteed</p>
 				</Container>
 			</div>
-			<nav>
+			{/* <nav>
 				<Container></Container>
 			</nav>
 			<div className={cn("bg-primary-100/25 py-6")}>
@@ -52,7 +52,7 @@ export function Header() {
 						</NavigationMenuList>
 					</NavigationMenu>
 				</Container>
-			</div>
+			</div> */}
 		</header>
 	);
 }

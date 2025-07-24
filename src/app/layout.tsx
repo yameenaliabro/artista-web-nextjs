@@ -3,7 +3,7 @@ import type { PropsWithChildren } from "react";
 
 import { mavenPro } from "~/lib/fonts";
 import { Footer } from "./_layout/footer";
-// import { Header } from "./_layout/header";
+import { Header } from "./_layout/header";
 import { RootProvider } from "./provider";
 
 import "~/styles/globals.css";
@@ -18,7 +18,7 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
 		<html lang="en" suppressHydrationWarning>
 			<body className={`${mavenPro.className} antialiased`}>
 				<RootProvider>
-					{/* <Header /> */}
+					<Header />
 					{children}
 					<Footer />
 				</RootProvider>
