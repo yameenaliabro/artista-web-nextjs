@@ -1,9 +1,13 @@
+import BlindInside from "~/assets/images/home/blind-inside.png";
+import BlindOutside from "~/assets/images/home/blind-outside.png";
 import Category1 from "~/assets/images/home/category1.png";
 import Category2 from "~/assets/images/home/category2.png";
 import Category3 from "~/assets/images/home/category3.png";
 import CTA from "~/assets/images/home/cta.png";
 import FastDeliveryIcon from "~/assets/images/home/delivery-truck-speed.png";
 import DiscountDeal from "~/assets/images/home/discount-deal.png";
+import HelpMeasureBg from "~/assets/images/home/help-measure-bg.png";
+import HelpMeasureBlind from "~/assets/images/home/help-measure-blind.png";
 import Hero from "~/assets/images/home/hero.jpg";
 import OurBlinds from "~/assets/images/home/our-blinds.png";
 import CustomModeIcon from "~/assets/images/home/ruler-angular.png";
@@ -12,10 +16,6 @@ import Sample2 from "~/assets/images/home/sample2.png";
 import EasyDIYIcon from "~/assets/images/home/sledge-hammer.png";
 import FairPricingIcon from "~/assets/images/home/tag.png";
 import WhyChoose from "~/assets/images/home/why-choose.png";
-import HelpMeasureBg from "~/assets/images/home/help-measure-bg.png";
-import HelpMeasureBlind from "~/assets/images/home/help-measure-blind.png";
-import BlindInside from "~/assets/images/home/blind-inside.png";
-import BlindOutside from "~/assets/images/home/blind-outside.png";
 
 export const home = {
 	hero: {

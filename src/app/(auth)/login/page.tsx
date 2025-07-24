@@ -5,5 +5,5 @@ export default function LoginPage() {
 		<main>
 			<Login />
 		</main>
-	)
+	);
 }

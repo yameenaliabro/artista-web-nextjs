@@ -1,11 +1,4 @@
 import { Container } from "~/app/_layout/container";
-import {
-	NavigationMenu,
-	NavigationMenuItem,
-	NavigationMenuLink,
-	NavigationMenuList,
-	NavigationMenuTrigger,
-} from "~/components/ui/navigation-menu";
 import { cn } from "~/lib/utils";
 
 export function Header() {
