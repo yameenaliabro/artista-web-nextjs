@@ -28,21 +28,21 @@ import {
 import { Input } from "~/components/ui/input";
 import { Separator } from "~/components/ui/separator";
 
-const LoginFormSchema = z.object({
+const SignInFormSchema = z.object({
 	email: z.string().email({
 		message: "Email must be a valid email address.",
 	}),
 });
 
-export function Login() {
-	const form = useForm<z.infer<typeof LoginFormSchema>>({
-		resolver: zodResolver(LoginFormSchema),
+export function SignIn() {
+	const form = useForm<z.infer<typeof SignInFormSchema>>({
+		resolver: zodResolver(SignInFormSchema),
 		defaultValues: {
 			email: "",
 		},
 	});
 
-	function onSubmit(data: z.infer<typeof LoginFormSchema>) {
+	function onSubmit(data: z.infer<typeof SignInFormSchema>) {
 		toast("You submitted the following values", {
 			description: (
 				<pre className="mt-2 w-[320px] rounded-md bg-white p-4">
