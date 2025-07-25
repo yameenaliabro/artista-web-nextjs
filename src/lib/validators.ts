@@ -186,6 +186,15 @@ export function passwordSchema(
 	return temp;
 }
 
+export function pinSchema(
+	identifier: string = "Pin",
+	length: number = 6,
+): zod.ZodString {
+	return stringSchema(identifier, length).regex(/^\d+$/, {
+		message: `${identifier} must contain only numbers`,
+	});
+}
+
 export function phoneSchema(
 	identifier: string = "Phone number",
 	allowInternational: boolean = true,
