@@ -96,7 +96,7 @@ export function CategoriesSection() {
 					</Card>
 				</aside>
 				<div className="w-full md:w-3/4 space-y-12">
-					<ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
+					<ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 						{products.map((product) => (
 							<li key={product.id}>
 								<ProductCard product={product} />
