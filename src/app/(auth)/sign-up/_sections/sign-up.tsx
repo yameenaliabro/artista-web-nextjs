@@ -27,11 +27,10 @@ import {
 } from "~/components/ui/form";
 import { Input } from "~/components/ui/input";
 import { Separator } from "~/components/ui/separator";
+import { emailSchema } from "~/lib/validators";
 
 const SignUpFormSchema = z.object({
-	email: z.string().email({
-		message: "Email must be a valid email address.",
-	}),
+	email: emailSchema("Email"),
 });
 
 export function SignUp() {
@@ -110,7 +109,7 @@ export function SignUp() {
 								<Button
 									variant="outline"
 									size="icon"
-									className="mt-4 border border-solid border-muted"
+									className="border border-solid border-muted"
 								>
 									<Image
 										src={assets.images.app.icons.apple.src}
@@ -132,11 +131,22 @@ export function SignUp() {
 								<Button
 									variant="outline"
 									size="icon"
-									className="mt-4 border border-solid border-muted"
+									className="border border-solid border-muted"
 								>
 									<Image
 										src={assets.images.app.icons.facebook.src}
 										alt={assets.images.app.icons.facebook.alt}
+										className="size-7"
+									/>
+								</Button>
+								<Button
+									variant="outline"
+									size="icon"
+									className="border border-solid border-muted"
+								>
+									<Image
+										src={assets.images.app.icons.outlook.src}
+										alt={assets.images.app.icons.outlook.alt}
 										className="size-7"
 									/>
 								</Button>

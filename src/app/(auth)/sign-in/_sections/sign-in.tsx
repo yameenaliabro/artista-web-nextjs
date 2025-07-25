@@ -1,7 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { MailIcon } from "lucide-react";
+import { EyeIcon, MailIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
@@ -13,6 +13,7 @@ import { Button } from "~/components/ui/button";
 import {
 	Card,
 	CardContent,
+	CardDescription,
 	CardFooter,
 	CardHeader,
 	CardTitle,
@@ -27,11 +28,11 @@ import {
 } from "~/components/ui/form";
 import { Input } from "~/components/ui/input";
 import { Separator } from "~/components/ui/separator";
+import { emailSchema, passwordSchema } from "~/lib/validators";
 
 const SignInFormSchema = z.object({
-	email: z.string().email({
-		message: "Email must be a valid email address.",
-	}),
+	email: emailSchema("Email"),
+	password: passwordSchema("Password"),
 });
 
 export function SignIn() {
@@ -39,6 +40,7 @@ export function SignIn() {
 		resolver: zodResolver(SignInFormSchema),
 		defaultValues: {
 			email: "",
+			password: "",
 		},
 	});
 
@@ -64,9 +66,15 @@ export function SignIn() {
 								alt={assets.images.app.logo.alt}
 								className="w-36"
 							/>
-							<CardTitle className="max-w-48 text-2xl/tight">
-								Welcome to the Artista Blinds
-							</CardTitle>
+							<div>
+								<CardTitle className="text-xl/tight">
+									Welcome to the Artista Blinds
+								</CardTitle>
+								<CardDescription className="text-xs">
+									<p>Hey, welcome back!</p>
+									<p>We've missed having you around.</p>
+								</CardDescription>
+							</div>
 						</CardHeader>
 						<CardContent>
 							<Form {...form}>
@@ -99,8 +107,32 @@ export function SignIn() {
 										/>
 									</div>
 									<div>
+										<FormField
+											control={form.control}
+											name="password"
+											render={({ field }) => (
+												<FormItem>
+													<FormLabel>Password</FormLabel>
+													<FormControl>
+														<div className="relative">
+															<Input
+																className="peer pe-9"
+																placeholder="Password"
+																{...field}
+															/>
+															<div className="text-muted-foreground/80 pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 peer-disabled:opacity-50">
+																<EyeIcon size={20} aria-hidden="true" />
+															</div>
+														</div>
+													</FormControl>
+													<FormMessage />
+												</FormItem>
+											)}
+										/>
+									</div>
+									<div>
 										<Button type="submit" size="lg" className="w-full">
-											Get Started
+											Sign In
 										</Button>
 									</div>
 								</form>
@@ -110,7 +142,7 @@ export function SignIn() {
 								<Button
 									variant="outline"
 									size="icon"
-									className="mt-4 border border-solid border-muted"
+									className="border border-solid border-muted"
 								>
 									<Image
 										src={assets.images.app.icons.apple.src}
@@ -132,11 +164,22 @@ export function SignIn() {
 								<Button
 									variant="outline"
 									size="icon"
-									className="mt-4 border border-solid border-muted"
+									className="border border-solid border-muted"
 								>
 									<Image
 										src={assets.images.app.icons.facebook.src}
 										alt={assets.images.app.icons.facebook.alt}
+										className="size-7"
+									/>
+								</Button>
+								<Button
+									variant="outline"
+									size="icon"
+									className="border border-solid border-muted"
+								>
+									<Image
+										src={assets.images.app.icons.outlook.src}
+										alt={assets.images.app.icons.outlook.alt}
 										className="size-7"
 									/>
 								</Button>
@@ -156,7 +199,7 @@ export function SignIn() {
 							<p>
 								Already have an account?{" "}
 								<Link href={"#"} className="text-primary-500">
-									Sign In
+									Sign Up
 								</Link>
 							</p>
 						</CardFooter>
