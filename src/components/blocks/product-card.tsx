@@ -1,7 +1,8 @@
 import { HeartIcon } from "lucide-react";
-import Link from "next/link";
 import Image, { type StaticImageData } from "next/image";
-
+import Link from "next/link";
+import { formatCurrency } from "~/lib/currency";
+import { calcDiscount } from "~/lib/discount";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import {
@@ -12,8 +13,6 @@ import {
 	CardTitle,
 } from "../ui/card";
 import { Ratings } from "./ratings";
-import { calcDiscount } from "~/lib/discount";
-import { formatCurrency } from "~/lib/currency";
 
 interface ProductCardProps {
 	product: {
