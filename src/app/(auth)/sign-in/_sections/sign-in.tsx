@@ -60,7 +60,7 @@ export function SignIn() {
 			<div className="h-full flex gap-8">
 				<div className="flex-1 flex flex-col justify-center items-center lg:items-end 2xl:items-center">
 					<Card className="2xl:ml-48 gap-8">
-						<CardHeader className="space-y-8">
+						<CardHeader className="space-y-6">
 							<Image
 								src={assets.images.app.logo.src}
 								alt={assets.images.app.logo.alt}
@@ -80,7 +80,7 @@ export function SignIn() {
 							<Form {...form}>
 								<form
 									onSubmit={form.handleSubmit(onSubmit)}
-									className="space-y-6"
+									className="min-w-[400px] space-y-6"
 								>
 									<div>
 										<FormField
@@ -185,7 +185,7 @@ export function SignIn() {
 								</Button>
 							</div>
 						</CardContent>
-						<CardFooter className="flex-col text-[0.65rem] font-medium px-16">
+						<CardFooter className="flex-col text-[0.65rem] font-medium">
 							<p className="">
 								By continuing, you agree to our{" "}
 								<Link href={"#"} className="text-primary-500">

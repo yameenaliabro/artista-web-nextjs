@@ -3,7 +3,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { MailIcon } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -13,7 +12,7 @@ import { Button } from "~/components/ui/button";
 import {
 	Card,
 	CardContent,
-	CardFooter,
+	CardDescription,
 	CardHeader,
 	CardTitle,
 } from "~/components/ui/card";
@@ -26,22 +25,21 @@ import {
 	FormMessage,
 } from "~/components/ui/form";
 import { Input } from "~/components/ui/input";
-import { Separator } from "~/components/ui/separator";
 import { emailSchema } from "~/lib/validators";
 
-const SignUpFormSchema = z.object({
+const ForgetPasswordFormSchema = z.object({
 	email: emailSchema("Email"),
 });
 
-export function SignUp() {
-	const form = useForm<z.infer<typeof SignUpFormSchema>>({
-		resolver: zodResolver(SignUpFormSchema),
+export function ForgetPassword() {
+	const form = useForm<z.infer<typeof ForgetPasswordFormSchema>>({
+		resolver: zodResolver(ForgetPasswordFormSchema),
 		defaultValues: {
 			email: "",
 		},
 	});
 
-	function onSubmit(data: z.infer<typeof SignUpFormSchema>) {
+	function onSubmit(data: z.infer<typeof ForgetPasswordFormSchema>) {
 		toast("You submitted the following values", {
 			description: (
 				<pre className="mt-2 w-[320px] rounded-md bg-white p-4">
@@ -63,9 +61,15 @@ export function SignUp() {
 								alt={assets.images.app.logo.alt}
 								className="w-36"
 							/>
-							<CardTitle className="max-w-48 text-2xl/tight">
-								Welcome to the Artista Blinds
-							</CardTitle>
+							<div>
+								<CardTitle className="text-xl/tight">
+									Forget Password?
+								</CardTitle>
+								<CardDescription className="text-sm">
+									Oh! you forget the password? Don’t worry, we will help you to
+									reset password.
+								</CardDescription>
+							</div>
 						</CardHeader>
 						<CardContent>
 							<Form {...form}>
@@ -99,77 +103,12 @@ export function SignUp() {
 									</div>
 									<div>
 										<Button type="submit" size="lg" className="w-full">
-											Get Started
+											Send Password Reset Link
 										</Button>
 									</div>
 								</form>
 							</Form>
-							<Separator className="my-6" />
-							<div className="flex justify-center gap-3">
-								<Button
-									variant="outline"
-									size="icon"
-									className="border border-solid border-muted"
-								>
-									<Image
-										src={assets.images.app.icons.apple.src}
-										alt={assets.images.app.icons.apple.alt}
-										className="size-7"
-									/>
-								</Button>
-								<Button
-									variant="outline"
-									size="icon"
-									className="border border-solid border-muted"
-								>
-									<Image
-										src={assets.images.app.icons.google.src}
-										alt={assets.images.app.icons.google.alt}
-										className="size-7"
-									/>
-								</Button>
-								<Button
-									variant="outline"
-									size="icon"
-									className="border border-solid border-muted"
-								>
-									<Image
-										src={assets.images.app.icons.facebook.src}
-										alt={assets.images.app.icons.facebook.alt}
-										className="size-7"
-									/>
-								</Button>
-								<Button
-									variant="outline"
-									size="icon"
-									className="border border-solid border-muted"
-								>
-									<Image
-										src={assets.images.app.icons.outlook.src}
-										alt={assets.images.app.icons.outlook.alt}
-										className="size-7"
-									/>
-								</Button>
-							</div>
 						</CardContent>
-						<CardFooter className="flex-col text-[0.65rem] font-medium">
-							<p className="">
-								By continuing, you agree to our{" "}
-								<Link href={"#"} className="text-primary-500">
-									Terms of Use
-								</Link>{" "}
-								and{" "}
-								<Link href={"#"} className="text-primary-500">
-									Privacy Policy.
-								</Link>
-							</p>
-							<p>
-								Already have an account?{" "}
-								<Link href={"#"} className="text-primary-500">
-									Sign In
-								</Link>
-							</p>
-						</CardFooter>
 					</Card>
 				</div>
 				<div className="flex-1 relative hidden lg:block m-4 rounded-xl overflow-hidden">
