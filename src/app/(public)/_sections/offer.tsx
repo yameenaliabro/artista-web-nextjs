@@ -59,7 +59,7 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
 	};
 
 	return (
-		<div className="flex items-center justify-center gap-4 my-8">
+		<div className="flex items-center justify-center md:gap-4 my-8 px-8">
 			{/* Days */}
 			<div className="flex flex-col items-center">
 				<div className="text-4xl md:text-6xl font-bold text-yellow-400">
@@ -71,9 +71,7 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
 			</div>
 
 			{/* Separator */}
-			<div className="text-4xl md:text-6xl font-bold text-yellow-400 mx-2">
-				:
-			</div>
+			<div className="text-4xl md:text-6xl font-bold text-white mx-2">:</div>
 
 			{/* Hours */}
 			<div className="flex flex-col items-center">
@@ -86,9 +84,7 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
 			</div>
 
 			{/* Separator */}
-			<div className="text-4xl md:text-6xl font-bold text-yellow-400 mx-2">
-				:
-			</div>
+			<div className="text-4xl md:text-6xl font-bold text-white mx-2">:</div>
 
 			{/* Minutes */}
 			<div className="flex flex-col items-center">
@@ -101,9 +97,7 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
 			</div>
 
 			{/* Separator */}
-			<div className="text-4xl md:text-6xl font-bold text-yellow-400 mx-2">
-				:
-			</div>
+			<div className="text-4xl md:text-6xl font-bold text-white mx-2">:</div>
 
 			{/* Seconds */}
 			<div className="flex flex-col items-center">
