@@ -7,13 +7,13 @@ export function OurBlindsSection() {
 	return (
 		<section className="relative">
 			<div className="absolute inset-0 -z-40 bg-secondary-100" />
-			<Container className="relative z-50 flex flex-col-reverse md:flex-row items-center gap-16 py-16">
-				<div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col justify-center">
+			<div className="relative z-50 flex flex-col-reverse md:flex-row items-center">
+				<Container className="w-full md:w-1/2 h-1/2 md:h-full py-16 flex flex-col justify-center items-end">
 					<div className="space-y-6">
 						<h2 className="max-w-2xl -ml-1.5 text-3xl md:text-5xl font-bold">
 							<span>View Our Blinds</span>
 						</h2>
-						<p className="max-w-2xl text-lg">
+						<p className="max-w-2xl md:max-w-lg text-lg">
 							Sem elit at laoreet placerat congue urna sem. " Awesome Team" Nam
 							luctus mauris nostra nisl lacinia elit penatibus senectus.
 							Habitant etiam velit praesent, ridiculus consequat in natoque
@@ -28,9 +28,9 @@ export function OurBlindsSection() {
 							</Button>
 						</div>
 					</div>
-				</div>
+				</Container>
 				<div className="w-full md:w-1/2 h-1/2 md:h-full">
-					<div className="aspect-[12/9] rounded-md overflow-hidden">
+					<div className="aspect-[12/9] overflow-hidden">
 						<Image
 							src={assets.images.home.ourBlinds.src}
 							alt={assets.images.home.ourBlinds.alt}
@@ -38,7 +38,7 @@ export function OurBlindsSection() {
 						/>
 					</div>
 				</div>
-			</Container>
+			</div>
 		</section>
 	);
 }
