@@ -82,14 +82,14 @@ export function CategoriesSection() {
 							<CardTitle className="text-2xl">Filters</CardTitle>
 						</CardHeader>
 						<CardContent></CardContent>
-						<CardFooter className="gap-3">
+						<CardFooter className="flex-col-reverse lg:flex-row gap-3">
 							<Button
 								variant="outline"
-								className="flex-1 rounded-md border-solid border-muted hover:border-neutral-500 text-destructive hover:text-destructive"
+								className="w-full lg:w-1/2 rounded-md border-solid border-muted hover:border-neutral-500 text-destructive hover:text-destructive"
 							>
 								Reset Filter
 							</Button>
-							<Button variant="primary" className="flex-1 rounded-md">
+							<Button variant="primary" className="w-full lg:w-1/2 rounded-md">
 								Apply
 							</Button>
 						</CardFooter>
