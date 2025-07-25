@@ -8,7 +8,9 @@ export function Header() {
 				className={cn("bg-primary text-primary-foreground text-center py-2")}
 			>
 				<Container>
-					<p>Stylish Blinds, Timeless Design, Comfort Guaranteed</p>
+					<p className="text-sm md:text-base">
+						Stylish Blinds, Timeless Design, Comfort Guaranteed
+					</p>
 				</Container>
 			</div>
 			{/* <nav>

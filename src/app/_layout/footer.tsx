@@ -7,8 +7,10 @@ export function Footer() {
 	return (
 		<footer>
 			<div className={cn("bg-primary-1000 text-primary-foreground py-8")}>
-				<Container className="flex items-center justify-between gap-6">
-					<p>Copyright ⓒ ArtistaBrands, 2025. All rights reserved.</p>
+				<Container className="flex flex-col md:flex-row items-center justify-between gap-6">
+					<p className="text-center md:text-left">
+						Copyright ⓒ ArtistaBrands, 2025. All rights reserved.
+					</p>
 					<nav>
 						<ul className="flex items-center gap-6">
 							<li>
