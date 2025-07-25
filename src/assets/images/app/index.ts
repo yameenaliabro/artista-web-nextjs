@@ -2,12 +2,19 @@ import Apple from "~/assets/images/app/icons8-apple-48.png";
 import Facebook from "~/assets/images/app/icons8-facebook-48.png";
 import Google from "~/assets/images/app/icons8-google-48.png";
 import Outlook from "~/assets/images/app/icons8-outlook-48.png";
-import Logo from "~/assets/images/app/logo.png";
+import LogoDark from "~/assets/images/app/logo-dark.png";
+import LogoLight from "~/assets/images/app/logo-light.png";
 
 export const app = {
 	logo: {
-		src: Logo,
-		alt: "Logo",
+		light: {
+			src: LogoLight,
+			alt: "Logo",
+		},
+		dark: {
+			src: LogoDark,
+			alt: "Logo",
+		},
 	},
 	icons: {
 		apple: {

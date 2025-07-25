@@ -57,8 +57,8 @@ export function ForgetPassword() {
 					<Card className="2xl:ml-48 gap-8">
 						<CardHeader className="space-y-8">
 							<Image
-								src={assets.images.app.logo.src}
-								alt={assets.images.app.logo.alt}
+								src={assets.images.app.logo.light.src}
+								alt={assets.images.app.logo.light.alt}
 								className="w-36"
 							/>
 							<div>
