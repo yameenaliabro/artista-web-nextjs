@@ -1,8 +1,18 @@
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import type { StaticImageData } from "next/image";
 
 import { Container } from "~/app/_layout/container";
 import { assets } from "~/assets";
 import { ProductCard } from "~/components/blocks/product-card";
+import { buttonVariants } from "~/components/ui/button";
+import {
+	Pagination,
+	PaginationContent,
+	PaginationEllipsis,
+	PaginationItem,
+	PaginationLink,
+} from "~/components/ui/pagination";
+import { cn } from "~/lib/utils";
 
 const products: {
 	id: string;
@@ -59,14 +69,54 @@ export function CategoriesSection() {
 	return (
 		<section className="relative min-h-[100vh]">
 			<Container className="py-16 flex gap-8">
-				<aside className="w-1/4"></aside>
-				<ul className="w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					{products.map((product) => (
-						<li key={product.id}>
-							<ProductCard product={product} />
-						</li>
-					))}
-				</ul>
+				<aside className="hidden md:block w-1/4"></aside>
+				<div className="w-full md:w-3/4 space-y-12">
+					<ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+						{products.map((product) => (
+							<li key={product.id}>
+								<ProductCard product={product} />
+							</li>
+						))}
+					</ul>
+					<Pagination>
+						<PaginationContent>
+							<PaginationItem>
+								<PaginationLink
+									href="#"
+									className={cn(
+										buttonVariants({ variant: "primary" }),
+										"hover:text-white rounded-md",
+									)}
+								>
+									<ChevronLeftIcon />
+								</PaginationLink>
+							</PaginationItem>
+							<PaginationItem>
+								<PaginationLink href="#">1</PaginationLink>
+							</PaginationItem>
+							<PaginationItem>
+								<PaginationLink href="#">2</PaginationLink>
+							</PaginationItem>
+							<PaginationItem>
+								<PaginationLink href="#">3</PaginationLink>
+							</PaginationItem>
+							<PaginationItem>
+								<PaginationEllipsis />
+							</PaginationItem>
+							<PaginationItem>
+								<PaginationLink
+									href="#"
+									className={cn(
+										buttonVariants({ variant: "primary" }),
+										"hover:text-white rounded-md",
+									)}
+								>
+									<ChevronRightIcon />
+								</PaginationLink>
+							</PaginationItem>
+						</PaginationContent>
+					</Pagination>
+				</div>
 			</Container>
 		</section>
 	);
