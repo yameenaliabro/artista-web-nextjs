@@ -146,7 +146,7 @@
 	--color-accent-foreground: var(--color-white);
 	--color-muted: var(--color-neutral-300);
 	--color-muted-foreground: var(--color-text-700);
-	--color-destructive: var(--color-danger-700);
+	--color-destructive: var(--color-danger-800);
 	--color-destructive-foreground: var(--color-white);
 
 	--color-ring: var(--color-primary);

@@ -4,7 +4,14 @@ import type { StaticImageData } from "next/image";
 import { Container } from "~/app/_layout/container";
 import { assets } from "~/assets";
 import { ProductCard } from "~/components/blocks/product-card";
-import { buttonVariants } from "~/components/ui/button";
+import { Button, buttonVariants } from "~/components/ui/button";
+import {
+	Card,
+	CardContent,
+	CardFooter,
+	CardHeader,
+	CardTitle,
+} from "~/components/ui/card";
 import {
 	Pagination,
 	PaginationContent,
@@ -69,7 +76,25 @@ export function CategoriesSection() {
 	return (
 		<section className="relative min-h-[100vh]">
 			<Container className="py-16 flex gap-8">
-				<aside className="hidden md:block w-1/4"></aside>
+				<aside className="hidden md:block w-1/4">
+					<Card>
+						<CardHeader>
+							<CardTitle className="text-2xl">Filters</CardTitle>
+						</CardHeader>
+						<CardContent></CardContent>
+						<CardFooter className="gap-3">
+							<Button
+								variant="outline"
+								className="flex-1 rounded-md border-solid border-muted hover:border-neutral-500 text-destructive hover:text-destructive"
+							>
+								Reset Filter
+							</Button>
+							<Button variant="primary" className="flex-1 rounded-md">
+								Apply
+							</Button>
+						</CardFooter>
+					</Card>
+				</aside>
 				<div className="w-full md:w-3/4 space-y-12">
 					<ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
 						{products.map((product) => (
