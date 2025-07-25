@@ -71,7 +71,7 @@ export function SignUp() {
 							<Form {...form}>
 								<form
 									onSubmit={form.handleSubmit(onSubmit)}
-									className="min-w-[400px] space-y-6"
+									className="md:min-w-[400px] space-y-6"
 								>
 									<div>
 										<FormField
