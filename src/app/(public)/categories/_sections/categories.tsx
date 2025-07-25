@@ -1,16 +1,8 @@
-"use client";
-
-import Autoplay from "embla-carousel-autoplay";
 import type { StaticImageData } from "next/image";
 
 import { Container } from "~/app/_layout/container";
 import { assets } from "~/assets";
 import { ProductCard } from "~/components/blocks/product-card";
-import {
-	Carousel,
-	CarouselContent,
-	CarouselItem,
-} from "~/components/ui/carousel";
 
 const products: {
 	id: string;
@@ -63,43 +55,18 @@ const products: {
 	},
 ];
 
-export function ProductsSection() {
+export function CategoriesSection() {
 	return (
-		<section className="relative">
-			<Container className="py-16 space-y-16">
-				<div className="flex flex-col items-center text-center gap-8">
-					<h2 className="max-w-2xl -ml-1.5 text-3xl md:text-5xl font-bold">
-						<span className="text-primary-1000">Featured</span>{" "}
-						<span className="text-primary">Products</span>
-					</h2>
-					<p className="max-w-2xl text-sm text-muted-foreground">
-						Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqut enim ad minim
-					</p>
-				</div>
-				<Carousel
-					opts={{
-						align: "start",
-					}}
-					plugins={[
-						Autoplay({
-							delay: 2000,
-						}),
-					]}
-				>
-					<CarouselContent>
-						{products.map((product) => (
-							<CarouselItem
-								key={product.id}
-								className="sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
-							>
-								<div className="px-0">
-									<ProductCard product={product} />
-								</div>
-							</CarouselItem>
-						))}
-					</CarouselContent>
-				</Carousel>
+		<section className="relative min-h-[100vh]">
+			<Container className="py-16 flex gap-8">
+				<aside className="w-1/4"></aside>
+				<ul className="w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					{products.map((product) => (
+						<li key={product.id}>
+							<ProductCard product={product} />
+						</li>
+					))}
+				</ul>
 			</Container>
 		</section>
 	);

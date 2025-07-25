@@ -13,6 +13,8 @@ const badgeVariants = cva(
 					"bg-primary text-primary-foreground [a&]:hover:bg-primary/90",
 				secondary:
 					"bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90",
+        "secondary-inverse":
+					"bg-secondary-100 text-secondary-700 [a&]:hover:bg-secondary/90",
         accent:
 					"bg-accent text-accent-foreground [a&]:hover:bg-accent/90",
 				muted: 
