@@ -6,6 +6,9 @@ import Category3 from "~/assets/images/home/category3.png";
 import CTA from "~/assets/images/home/cta.png";
 import FastDeliveryIcon from "~/assets/images/home/delivery-truck-speed.png";
 import DiscountDeal from "~/assets/images/home/discount-deal.png";
+import HowItWorksBg from "~/assets/images/home/how-it-works-bg.png";
+import HowItWorksDesktop from "~/assets/images/home/how-it-works-desktop.png";
+import HowItWorksMobile from "~/assets/images/home/how-it-works-mobile.png";
 import HelpMeasureBg from "~/assets/images/home/help-measure-bg.png";
 import HelpMeasureBlind from "~/assets/images/home/help-measure-blind.png";
 import Hero from "~/assets/images/home/hero.jpg";
@@ -41,6 +44,18 @@ export const home = {
 	sample2: {
 		src: Sample2,
 		alt: "Sample 2",
+	},
+	howItWorksBg: {
+		src: HowItWorksBg,
+		alt: "How It Works",
+	},
+	howItWorksDesktop: {
+		src: HowItWorksDesktop,
+		alt: "How It Works Bg Desktop",
+	},
+	howItWorksMobile: {
+		src: HowItWorksMobile,
+		alt: "How It Works Bg Mobile",
 	},
 	helpMeasureBg: {
 		src: HelpMeasureBg,

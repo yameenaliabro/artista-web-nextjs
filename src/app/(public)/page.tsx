@@ -5,10 +5,12 @@ import { FreeSamplesSection } from "./_sections/free-samples";
 import { HelpMeasureSection } from "./_sections/help-measure";
 import { HeroSection } from "./_sections/hero";
 import { HomeBlindsSection } from "./_sections/home-blinds";
+import { HowItWorksSection } from "./_sections/how-it-works";
 import { OfferSection } from "./_sections/offer";
 import { OurBlindsSection } from "./_sections/our-blinds";
 import { ProductsSection } from "./_sections/products";
 import { WhyChooseSection } from "./_sections/why-choose";
+import { YourChoiceSection } from "./_sections/your-choice";
 
 export default function RootPage() {
 	return (
@@ -16,7 +18,9 @@ export default function RootPage() {
 			<HeroSection />
 			<OfferSection />
 			<DiscoverCategoriesSection />
+			<YourChoiceSection />
 			<FreeSamplesSection />
+			<HowItWorksSection />
 			<HelpMeasureSection />
 			<WhyChooseSection />
 			<ProductsSection />
