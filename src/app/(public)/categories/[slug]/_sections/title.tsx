@@ -15,7 +15,6 @@ export function TitleSection() {
 			<div className="absolute inset-0 -z-40 bg-linear-90 from-white via-white/75 to-white/0" />
 			<Container className="relative z-50 h-full flex flex-col justify-center py-16">
 				<div>
-					{/* <h4 className="text-lg text-secondary">ARTISTA BLINDS</h4> */}
 					<Badge variant="secondary-inverse">ARTISTA BLINDS</Badge>
 				</div>
 				<div className="space-y-6">
